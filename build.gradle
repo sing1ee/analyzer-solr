@@ -1,0 +1,28 @@
+group = 'analyzer.solr5'
+version = '1.0'
+apply plugin: 'java'
+apply plugin: "eclipse"
+apply plugin: "idea"
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile("org.apache.lucene:lucene-core:5.0.0")
+    compile("org.apache.lucene:lucene-queryparser:5.0.0")
+    compile("org.apache.lucene:lucene-analyzers-common:5.0.0")
+    compile('com.huaban:jieba-analysis:1.0.0')
+//    compile("org.fnlp:fnlp-core:2.0-SNAPSHOT")
+//    compile("edu.stanford.nlp:edu.stanford.nlp:3.4.1")
+}
+
+task "create-dirs" << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
