@@ -28,3 +28,23 @@ Lucene5.0.0
     </fieldType>
 
 ```
+
+####Stanford分词
+
+```
+          <fieldType name="text_stanford" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="analyzer.solr5.stanford.StanfordTokenizerFactory"  modelDir="/Users/zhangcheng/Downloads/softwares/stanford-segmenter-2014-06-16/data" />
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.SnowballPorterFilterFactory" language="English"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="analyzer.solr5.stanford.StanfordTokenizerFactory"  modelDir="/Users/zhangcheng/Downloads/softwares/stanford-segmenter-2014-06-16/data" />
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.SnowballPorterFilterFactory" language="English"/>
+      </analyzer>
+    </fieldType> 
+
+```
