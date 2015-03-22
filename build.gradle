@@ -19,7 +19,7 @@ dependencies {
     compile("org.apache.lucene:lucene-analyzers-common:5.0.0")
     compile('com.huaban:jieba-analysis:1.0.0')
 //    compile("org.fnlp:fnlp-core:2.0-SNAPSHOT")
-//    compile("edu.stanford.nlp:edu.stanford.nlp:3.4.1")
+    compile("edu.stanford.nlp:stanford-corenlp:3.5.1")
 }
 
 task "create-dirs" << {
