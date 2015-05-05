@@ -20,13 +20,13 @@ public class JiebaTokenizer extends Tokenizer {
 	
 	private JiebaAdapter jieba;
 
-	protected JiebaTokenizer(String segModeName) {
+	protected JiebaTokenizer(String segModeName, String userDictPath) {
 		
 	    this.offsetAtt = addAttribute(OffsetAttribute.class);
 	    this.termAtt = addAttribute(CharTermAttribute.class);
 	    this.typeAtt = addAttribute(TypeAttribute.class);
 	    
-	    jieba = new JiebaAdapter(input, segModeName);
+	    jieba = new JiebaAdapter(input, segModeName, userDictPath);
 	    
 	}
 

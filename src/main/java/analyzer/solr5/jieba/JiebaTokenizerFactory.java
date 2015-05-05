@@ -11,6 +11,7 @@ import java.util.Map;
 public class JiebaTokenizerFactory extends TokenizerFactory {
 	
 	private String segMode;
+	private String userDictPath;
 	
 	public JiebaTokenizerFactory(Map<String, String> args) {
 		super(args);
@@ -19,11 +20,16 @@ public class JiebaTokenizerFactory extends TokenizerFactory {
         } else {
         	segMode = args.get("segMode");
         }
+		if (null == args.get("userDict")) {
+			userDictPath = null;
+		} else {
+			userDictPath = args.get("userDict");
+		}
 	}
 
 	@Override
 	public Tokenizer create(AttributeFactory arg0) {
-		return new JiebaTokenizer(segMode);
+		return new JiebaTokenizer(segMode, userDictPath);
 	}
 
 	public String getSegMode() {

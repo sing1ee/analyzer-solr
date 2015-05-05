@@ -3,7 +3,9 @@ package analyzer.solr5.jieba;
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import com.huaban.analysis.jieba.JiebaSegmenter.SegMode;
 import com.huaban.analysis.jieba.SegToken;
+import com.huaban.analysis.jieba.WordDictionary;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.Iterator;
@@ -19,7 +21,7 @@ public class JiebaAdapter implements Iterator<SegToken> {
 
 	private String raw = null;
 
-	public JiebaAdapter(Reader input, String segModeName) {
+	public JiebaAdapter(Reader input, String segModeName, String userDictPath) {
 
 		this.jiebaTagger = new JiebaSegmenter();
 
@@ -27,6 +29,17 @@ public class JiebaAdapter implements Iterator<SegToken> {
 			segMode = SegMode.SEARCH;
 		} else {
 			segMode = SegMode.valueOf(segModeName);
+		}
+
+		if (null != userDictPath) {
+			try{
+				WordDictionary dictAdd = WordDictionary.getInstance();
+				File file = new File(userDictPath);
+				dictAdd.loadUserDict(file);
+				System.out.println("load userDict: " + userDictPath + " succ!");
+			} catch (Exception e) {
+				System.err.println("load userDict: " + userDictPath + " fail!");
+			}
 		}
 	}
 
