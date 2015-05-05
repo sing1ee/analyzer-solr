@@ -37,6 +37,6 @@ public class JiebaAnalyzer extends Analyzer {
 
 	@Override
 	protected TokenStreamComponents createComponents(String field) {
-		return new TokenStreamComponents(new JiebaTokenizer(this.segMode));
+		return new TokenStreamComponents(new JiebaTokenizer(this.segMode, null));
 	}
 }
