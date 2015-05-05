@@ -30,7 +30,6 @@ public class JiebaAdapter implements Iterator<SegToken> {
 		} else {
 			segMode = SegMode.valueOf(segModeName);
 		}
-
 		if (null != userDictPath) {
 			try{
 				WordDictionary dictAdd = WordDictionary.getInstance();
@@ -38,8 +37,11 @@ public class JiebaAdapter implements Iterator<SegToken> {
 				dictAdd.loadUserDict(file);
 				System.out.println("load userDict: " + userDictPath + " succ!");
 			} catch (Exception e) {
-				System.err.println("load userDict: " + userDictPath + " fail!");
+				e.printStackTrace();
+				System.out.println("load userDict: " + userDictPath + " fail!");
 			}
+		} else {
+			System.out.println("load userDict: " + userDictPath + " ??");
 		}
 	}
 
