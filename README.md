@@ -31,6 +31,16 @@ Lucene5.0.0
 
 ####结巴分词--自定义词典
 
+结巴自定义词典的格式
+
+```
+word freq pos
+```
+例如:
+```
+中国人 1000 n
+```
+
 ```xml
 
     <fieldType name="text_jieba" class="solr.TextField" positionIncrementGap="100">
