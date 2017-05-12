@@ -2,12 +2,12 @@
 analyzer adapter for solr 5, we support Jieba, and stranford in the future
 
 
-###Require
+### Require
 Lucene5.0.0
 
-###DEMO
+### DEMO
 
-####结巴分词
+#### 结巴分词
 
 ```xml
 
@@ -29,7 +29,7 @@ Lucene5.0.0
 
 ```
 
-####结巴分词--自定义词典
+#### 结巴分词--自定义词典
 
 结巴自定义词典的格式
 
@@ -61,7 +61,7 @@ word freq pos
 
 ```
 
-####Stanford分词
+#### Stanford分词
 
 ```
           <fieldType name="text_stanford" class="solr.TextField" positionIncrementGap="100">
