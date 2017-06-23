@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/analyzer-solr.iml" filepath="$PROJECT_DIR$/analyzer-solr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/analyzer-solr.iml" filepath="$PROJECT_DIR$/.idea/modules/analyzer-solr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/analyzer-solr_main.iml" filepath="$PROJECT_DIR$/.idea/modules/analyzer-solr_main.iml" group="analyzer-solr" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/analyzer-solr_test.iml" filepath="$PROJECT_DIR$/.idea/modules/analyzer-solr_test.iml" group="analyzer-solr" />
     </modules>
   </component>
 </project>

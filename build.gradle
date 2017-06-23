@@ -1,11 +1,9 @@
-group = 'analyzer.solr5'
-version = '1.0'
+group = 'analyzer.solr6'
+version = '6.6.0'
 apply plugin: 'java'
-apply plugin: "eclipse"
 apply plugin: "idea"
 
-sourceCompatibility = 1.5
-version = '1.0'
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -14,10 +12,10 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 
-    compile("org.apache.lucene:lucene-core:5.0.0")
-    compile("org.apache.lucene:lucene-queryparser:5.0.0")
-    compile("org.apache.lucene:lucene-analyzers-common:5.0.0")
-    compile('com.huaban:jieba-analysis:1.0.0')
+    compile("org.apache.lucene:lucene-core:6.6.0")
+    compile("org.apache.lucene:lucene-queryparser:6.6.0")
+    compile("org.apache.lucene:lucene-analyzers-common:6.6.0")
+    compile('com.huaban:jieba-analysis:1.0.2')
 //    compile("org.fnlp:fnlp-core:2.0-SNAPSHOT")
     compile("edu.stanford.nlp:stanford-corenlp:3.5.1")
 }

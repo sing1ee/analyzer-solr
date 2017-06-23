@@ -6,8 +6,6 @@ package analyzer.solr5.jieba;
 import com.huaban.analysis.jieba.JiebaSegmenter.SegMode;
 import org.apache.lucene.analysis.Analyzer;
 
-import java.io.Reader;
-
 /**
  * @author zhangcheng
  *

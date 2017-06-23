@@ -1,5 +1,5 @@
 # analyzer-solr
-analyzer adapter for solr 5, we support Jieba, and stranford in the future
+analyzer adapter for solr, we support Jieba, and stranford in the future
 
 
 ### Require

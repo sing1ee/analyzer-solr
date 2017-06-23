@@ -34,7 +34,7 @@ public class JiebaAdapter implements Iterator<SegToken> {
 			try{
 				WordDictionary dictAdd = WordDictionary.getInstance();
 				File file = new File(userDictPath);
-				dictAdd.loadUserDict(file);
+				dictAdd.loadUserDict(file.toPath());
 				System.out.println("load userDict: " + userDictPath + " succ!");
 			} catch (Exception e) {
 				e.printStackTrace();

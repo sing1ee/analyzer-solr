@@ -7,7 +7,6 @@ import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 
 import java.io.IOException;
-import java.io.Reader;
 
 public class JiebaTokenizer extends Tokenizer {
 
@@ -35,11 +34,10 @@ public class JiebaTokenizer extends Tokenizer {
 		clearAttributes();
 		if(jieba.hasNext()){
 			SegToken token = jieba.next();
-			termAtt.append(token.word.getToken());
+			termAtt.append(token.word);
 			termAtt.setLength(token.word.length());
 			offsetAtt.setOffset(token.startOffset, token.endOffset);
 			endPosition = token.endOffset;
-			typeAtt.setType(token.word.getTokenType());			
 			return true;
 		}
 		return false;
