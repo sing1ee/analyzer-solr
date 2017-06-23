@@ -3,7 +3,9 @@ analyzer adapter for solr, we support Jieba, and stranford in the future
 
 
 ### Require
-Lucene5.0.0
+
+- Lucene6.6.0
+- jieba1.0.2
 
 ### DEMO
 
