@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="analyzer-solr5_main" target="1.8" />
+      <module name="analyzer-solr5_test" target="1.8" />
       <module name="analyzer-solr_main" target="1.8" />
       <module name="analyzer-solr_test" target="1.8" />
     </bytecodeTargetLevel>
